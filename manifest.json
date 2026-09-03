@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "bc2pdf",
+  "version": "2.0.0",
+  "description": "Download a Basecamp doc as a clean PDF — hides Basecamp UI chrome, keeps native styling.",
+  "host_permissions": ["https://app.basecamp.com/*", "https://3.basecamp.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://app.basecamp.com/*/buckets/*/documents/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
